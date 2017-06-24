@@ -17,7 +17,7 @@ import styles from './styles.js'
 export default class NewDive extends Component {
   constructor(props) {
     super(props);
-    this.state = {hline: ''}, {subttl: ''}, {url: ''};
+    this.state = {hline: ''}, {subttl: ''}, {diveurl: ''};
   }
   static navigationOptions = {
     title: 'Compose',
@@ -40,26 +40,39 @@ export default class NewDive extends Component {
           backgroundColor="blue"
           barStyle="light-content"
         />
-        <TextInput
-          style={styles.diveTitle}
-          placeholder="Headline"
-          onChangeText={(hline) => this.setState({hline})}
-        />
-        <TextInput
-          multiline={true}
-          style={styles.subTitle}
-          placeholder="Subtitle"
-          onChangeText={(subttl) => this.setState({subttl})}
-        />
-        <TextInput
-          style={styles.subMeta}
-          placeholder="URL to link"
-          onChangeText={(text) => this.setState({text})}
-        />
+        <View style={styles.editor}>
+          <TextInput
+            style={styles.diveTitle}
+            placeholder="Headline"
+            onChangeText={(hline) => this.setState({hline})}
+          />
+          <TextInput
+            multiline={true}
+            style={styles.subTitle}
+            placeholder="Subtitle"
+            onChangeText={(subttl) => this.setState({subttl})}
+          />
+          <TextInput
+            style={styles.subMeta}
+            placeholder="URL to link"
+            onChangeText={(diveurl) => this.setState({diveurl})}
+          />
+        </View>
+        <Text style={styles.previewText}>
+          Preview
+        </Text>
         <Story
           diveTitle={this.state.hline}
           diveSubTitle={this.state.subttl}
+          diveTime='Now'
+          diveUrl={this.state.diveurl}
         />
+        <TouchableOpacity style={styles.searchPoolButton}
+         onPress={() => alert('Pool Creation')}>
+          <Text style={styles.searchPoolButtonText}>
+            Submit
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }

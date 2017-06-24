@@ -52,15 +52,13 @@ export default class Nexus extends Component {
                   diveSubTitle: 'The subtitle would go here for more explanation blah blah blah blah djfksdfjsl',
                   diveTime: '12:01pm',
                   poolTitle: 'pool/starwarsfans',
-                  diveUrl: 'http://www.radiotimes.com/news/2017-06-06/star-wars-the-last-jedi-will-be-released-a-day-early-in-the-uk',
-                  diveDisplayUrl: 'radiotimes.com'},
+                  diveUrl: 'http://www.radiotimes.com/news/2017-06-06/star-wars-the-last-jedi-will-be-released-a-day-early-in-the-uk'},
                  {key: 1,
                   diveTitle: 'Hillary Upset by Trump',
                   diveSubTitle: 'The subtitle would go h blah blah blah djfksdfjsl',
                   diveTime: 'Yesterday',
                   poolTitle: 'pool/imwithher',
-                  diveUrl: 'http://nymag.com/daily/intelligencer/2017/06/where-would-we-be-politically-if-hillary-clinton-had-won.html',
-                  diveDisplayUrl: 'nymag.com'}
+                  diveUrl: 'http://nymag.com/daily/intelligencer/2017/06/where-would-we-be-politically-if-hillary-clinton-had-won.html'}
                 ]}
           renderItem={({item}) => <Story
                                     key = {item.key}
@@ -69,7 +67,6 @@ export default class Nexus extends Component {
                                     diveTime={item.diveTime}
                                     poolTitle={item.poolTitle}
                                     diveUrl={item.diveUrl}
-                                    diveDisplayUrl={item.diveDisplayUrl}
                                   />}
         />
       </View>
