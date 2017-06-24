@@ -61,4 +61,5 @@ export default StyleSheet.create({
     fontSize: 24,
     color: '#ebebeb',
   },
+  
 });
