@@ -15,10 +15,12 @@ import { StackNavigator } from 'react-navigation';
 // Screens/Routes
 import Nexus from './routes/Nexus/Nexus.js'
 import PoolBrowser from './routes/PoolBrowser/PoolBrowser.js'
+import NewDive from './routes/NewDive/NewDive.js'
 
 const Newspool = StackNavigator({
-  Home: { screen: Nexus },
+  Dives: { screen: Nexus },
   PoolBrowser: { screen: PoolBrowser },
+  NewDive: { screen: NewDive },
 });
 
 AppRegistry.registerComponent('Newspool', () => Newspool);

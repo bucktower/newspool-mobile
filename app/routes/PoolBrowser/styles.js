@@ -4,16 +4,8 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ebebeb',
-  },
-  titleBar: {
-    backgroundColor: '#333333',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingTop: 24,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    paddingRight: 10
+    paddingLeft: 0,
+    marginTop: 0,
   },
   logoText: {
     fontSize: 32,
@@ -21,22 +13,33 @@ export default StyleSheet.create({
     fontFamily: 'Monoton-Regular'
   },
   actionButton: {
-    height: 50,
-    width: 50,
-    borderRadius: 50,
     backgroundColor: '#ebebeb',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  newPoolButton: {
+    flexDirection: 'row',
+    backgroundColor: '#ebebeb',
+    justifyContent: 'center',
+    paddingTop: 5,
+    paddingBottom: 5,
   },
-  instructions: {
-    textAlign: 'center',
+  newPoolButtonText: {
+    fontFamily: 'Shrikhand-Regular',
+    fontSize: 24,
     color: '#333333',
-    marginBottom: 5,
+  },
+  searchPoolButton: {
+    flexDirection: 'row',
+    backgroundColor: '#333333',
+    justifyContent: 'center',
+    paddingTop: 5,
+    paddingBottom: 5,
+  },
+  searchPoolButtonText: {
+    fontFamily: 'Shrikhand-Regular',
+    fontSize: 24,
+    color: '#ebebeb',
   },
 });

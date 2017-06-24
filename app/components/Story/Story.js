@@ -19,6 +19,11 @@ export default class Story extends Component {
           <Text style={styles.diveTitle}>
             {this.props.diveTitle}
           </Text>
+        </View>
+        <View style={styles.line1}>
+          <Text style={styles.subTitle}>
+            {this.props.diveSubTitle}
+          </Text>
           <Text style={styles.diveTime}>
             {this.props.diveTime}
           </Text>

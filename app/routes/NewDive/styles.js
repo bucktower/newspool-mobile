@@ -3,8 +3,6 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
     paddingTop: 10,
     paddingLeft: 10,
     paddingRight: 10,
@@ -17,24 +15,28 @@ export default StyleSheet.create({
   },
   diveTitle: {
     fontFamily: 'Shrikhand-Regular',
-    fontSize: 18,
+    fontSize: 24,
     color: '#333333',
+    height: 48,
+    marginBottom: 10,
   },
   diveTime: {
     fontFamily: 'Lato-Black',
     fontSize: 10,
     color: '#333333',
+    height: 40,
   },
   subTitle: {
-    flex: 2,
     fontFamily: 'Lato-Bold',
-    fontSize: 12,
+    fontSize: 18,
     color: '#333333',
     paddingRight: 5,
+    height: 72,
   },
   subMeta: {
     fontFamily: 'Lato-Light',
-    fontSize: 12,
+    fontSize: 18,
     color: '#333333',
+    height: 40,
   },
 });

@@ -15,7 +15,7 @@ import styles from './styles.js'
 
 export default class Nexus extends Component {
   static navigationOptions = {
-    title: 'Home',
+    title: 'Dives',
     header: null,
   };
   render() {
@@ -37,7 +37,7 @@ export default class Nexus extends Component {
           <Text style={styles.logoText}>
             Newspool
           </Text>
-          <TouchableOpacity onPress={() => alert('Button Pressed!')}>
+          <TouchableOpacity onPress={() => navigate('NewDive')}>
             <View style={styles.actionButton}>
               <Icon name='bell-plus' size={35} color='#333333' style={{
                 backgroundColor: 'transparent',
@@ -49,13 +49,15 @@ export default class Nexus extends Component {
         <FlatList
           data={[{key: 0,
                   diveTitle: 'The Last Jedi Scheduled for Nov 21',
-                  diveTime: '12:01pm Today',
+                  diveSubTitle: 'The subtitle would go here for more explanation blah blah blah blah djfksdfjsl',
+                  diveTime: '12:01pm',
                   poolTitle: 'pool/starwarsfans',
                   diveUrl: 'http://www.radiotimes.com/news/2017-06-06/star-wars-the-last-jedi-will-be-released-a-day-early-in-the-uk',
                   diveDisplayUrl: 'radiotimes.com'},
                  {key: 1,
                   diveTitle: 'Hillary Upset by Trump',
-                  diveTime: '2:15am Yesterday',
+                  diveSubTitle: 'The subtitle would go h blah blah blah djfksdfjsl',
+                  diveTime: 'Yesterday',
                   poolTitle: 'pool/imwithher',
                   diveUrl: 'http://nymag.com/daily/intelligencer/2017/06/where-would-we-be-politically-if-hillary-clinton-had-won.html',
                   diveDisplayUrl: 'nymag.com'}
@@ -63,6 +65,7 @@ export default class Nexus extends Component {
           renderItem={({item}) => <Story
                                     key = {item.key}
                                     diveTitle={item.diveTitle}
+                                    diveSubTitle={item.diveSubTitle}
                                     diveTime={item.diveTime}
                                     poolTitle={item.poolTitle}
                                     diveUrl={item.diveUrl}

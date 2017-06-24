@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   StatusBar,
   FlatList,
+  TextInput,
 } from 'react-native';
 // Icons
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
@@ -13,9 +14,13 @@ import Story from '../../components/Story/Story'
 // StyleSheet
 import styles from './styles.js'
 
-export default class PoolBrowser extends Component {
+export default class NewDive extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {hline: ''}, {subttl: ''}, {url: ''};
+  }
   static navigationOptions = {
-    title: 'Pools',
+    title: 'Compose',
     headerTintColor: '#ebebeb',
     headerStyle: {
         backgroundColor: '#333333',
@@ -35,18 +40,26 @@ export default class PoolBrowser extends Component {
           backgroundColor="blue"
           barStyle="light-content"
         />
-        <TouchableOpacity style={styles.newPoolButton}
-         onPress={() => alert('Pool Creation')}>
-          <Text style={styles.newPoolButtonText}>
-            New Pool
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.searchPoolButton}
-         onPress={() => alert('Pool Creation')}>
-          <Text style={styles.searchPoolButtonText}>
-            Search for Pool
-          </Text>
-        </TouchableOpacity>
+        <TextInput
+          style={styles.diveTitle}
+          placeholder="Headline"
+          onChangeText={(hline) => this.setState({hline})}
+        />
+        <TextInput
+          multiline={true}
+          style={styles.subTitle}
+          placeholder="Subtitle"
+          onChangeText={(subttl) => this.setState({subttl})}
+        />
+        <TextInput
+          style={styles.subMeta}
+          placeholder="URL to link"
+          onChangeText={(text) => this.setState({text})}
+        />
+        <Story
+          diveTitle={this.state.hline}
+          diveSubTitle={this.state.subttl}
+        />
       </View>
     );
   }
